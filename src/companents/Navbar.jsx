@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <section className="bg-base-300 p-0">
-      <div className=" navbar">
+      <div className=" navbar align-elements">
         <div className="flex-1">
           <NavLink to="/" className="btn btn-ghost text-xl">
             Bus
