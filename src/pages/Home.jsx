@@ -1,6 +1,4 @@
-import Input from "../companents/Input";
-import LoactionHistory from "../companents/LoactionHistory";
-import LocationSearch from "../companents/LocationSearch";
+import { LocationHistory, LocationSearch } from "../components";
 
 const Home = () => {
   return (
@@ -8,11 +6,10 @@ const Home = () => {
       <h1 className="collapse-title text-center">Search for tickets</h1>
       <LocationSearch></LocationSearch>
       <h1 className="collapse-title text-center">Search history</h1>
-      <LoactionHistory></LoactionHistory>
-      <LoactionHistory></LoactionHistory>
-      <LoactionHistory></LoactionHistory>
-      <LoactionHistory></LoactionHistory>
-      
+
+      <LocationHistory />
+      <LocationHistory />
+      <LocationHistory />
     </section>
   );
 };

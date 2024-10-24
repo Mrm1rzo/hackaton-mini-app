@@ -1,6 +1,6 @@
 import { FaAnglesRight } from "react-icons/fa6";
 
-const LoactionHistory = () => {
+const LocationHistory = () => {
   return (
     <div className="card my-2 bg-base-300">
       <div className="card-body flex flex-row flex-wrap items-center justify-between px-4 py-2">
@@ -16,4 +16,4 @@ const LoactionHistory = () => {
   );
 };
 
-export default LoactionHistory;
+export default LocationHistory;

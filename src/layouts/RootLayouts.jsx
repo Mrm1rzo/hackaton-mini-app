@@ -2,7 +2,7 @@
 import { Outlet } from "react-router-dom";
 
 // import component
-import { Footer, Navbar } from "../companents";
+import { Footer, Navbar } from "../components";
 
 const RootLayouts = () => {
   return (

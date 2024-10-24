@@ -1,4 +1,5 @@
 import { GrFormEdit, GrLocation, GrUser } from "react-icons/gr";
+import LocationComponent from "../components/Location";
 
 const Profile = () => {
   return (
@@ -15,7 +16,7 @@ const Profile = () => {
           </h2>
           <p className="flex items-center gap-2">
             <GrLocation />
-            Fergana Kirgili
+            <LocationComponent />
           </p>
           <p className="flex items-center gap-2">
             <GrLocation />
