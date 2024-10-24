@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const LocationComponent = () => {
   const [location, setLocation] = useState({
-    city: "",
+    Location: "",
     latitude: null,
     longitude: null,
   });
@@ -24,21 +24,27 @@ const LocationComponent = () => {
               const data = await response.json();
 
               if (data.results && data.results.length > 0) {
-                const city =
-                  data.results[0].components.city ||
+                const Location =
+                  data.results[0].components.Location ||
                   data.results[0].components.town ||
                   data.results[0].components.village ||
                   "Shahar topilmadi";
-                setLocation({ city, latitude: lat, longitude: long });
+                setLocation({ Location });
               } else {
-                setError("Shahar nomi topilmadi.");
+                setError(
+                  "Joylashuv topilmadi. Iltimos, boshqa joyni sinab ko'ring.",
+                );
               }
             } catch (fetchError) {
               setError("API so'rovida xato.");
             }
           },
           (geolocationError) => {
-            setError("Geolocation xatosi: " + geolocationError.message);
+            if (geolocationError.code === 1) {
+              setError("GPS o'chirilgan. Iltimos, GPSni yoqing.");
+            } else {
+              setError("Geolocation xatosi: " + geolocationError.message);
+            }
           },
         );
       } else {
@@ -53,11 +59,8 @@ const LocationComponent = () => {
     <div>
       <h1>Joylashuv</h1>
       {error && <p>{error}</p>}
-      {location.city ? (
-        <p>
-          Shahar: {location.city}, Kenglik: {location.latitude}, Uzunlik:{" "}
-          {location.longitude}
-        </p>
+      {location.Location && location.Location !== "Shahar topilmadi" ? (
+        <p>Shahar: {location.Location}</p>
       ) : (
         <p>Joylashuv ma'lumotlari olinmoqda...</p>
       )}
