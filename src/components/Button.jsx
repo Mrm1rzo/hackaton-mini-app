@@ -7,7 +7,7 @@ const Button = ({ text }) => {
       <button className="btn btn-primary w-[45%]">
         <GrSync /> Swap
       </button>
-      <NavLink to="/bus" className="btn btn-primary w-[45%]">
+      <NavLink to="/register" className="btn btn-primary w-[45%]">
         <GrSearch />
         Search
       </NavLink>

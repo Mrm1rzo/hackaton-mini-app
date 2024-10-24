@@ -8,7 +8,7 @@ import {
 
 // import layouts
 import RootLayouts from "./layouts/RootLayouts";
-import { Bus, Home, Profile, Map } from "./pages";
+import { Bus, Home, Profile, Map, Register, Login } from "./pages";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -18,6 +18,8 @@ const App = () => {
         <Route path="/ticket" element={<Map />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/bus" element={<Bus />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
       </Route>,
     ),
   );
