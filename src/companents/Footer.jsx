@@ -17,7 +17,7 @@ const Footer = () => {
         <nav className="flex flex-col gap-0">
           <NavLink to="/ticket" className="btn btn-ghost text-sm md:text-xl">
             <GrCatalog />
-            My ticket
+           Map
           </NavLink>
         </nav>
         <nav className="flex flex-col gap-0">

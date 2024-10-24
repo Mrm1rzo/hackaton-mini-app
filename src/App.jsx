@@ -8,14 +8,14 @@ import {
 
 // import layouts
 import RootLayouts from "./layouts/RootLayouts";
-import { Bus, Home, Profile, Ticket } from "./pages";
+import { Bus, Home, Profile, Map } from "./pages";
 
 const App = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route element={<RootLayouts />}>
         <Route path="/" element={<Home />} />
-        <Route path="/ticket" element={<Ticket />} />
+        <Route path="/ticket" element={<Map />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/bus" element={<Bus />} />
       </Route>,
