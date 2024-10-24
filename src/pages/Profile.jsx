@@ -1,5 +1,7 @@
 import { GrFormEdit, GrLocation, GrUser } from "react-icons/gr";
 import LocationComponent from "../components/Location";
+import { FaPhoneAlt, FaUser, FaUserEdit } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
 
 const Profile = () => {
   return (
@@ -12,22 +14,22 @@ const Profile = () => {
       <div className="card card-compact bg-base-300 shadow-xl">
         <div className="card-body">
           <h2 className="card-title">
-            <GrUser /> Humoyun Mirzo
+            <FaUser /> Humoyun Mirzo
           </h2>
           <p className="flex items-center gap-2">
             <GrLocation />
             <LocationComponent />
           </p>
           <p className="flex items-center gap-2">
-            <GrLocation />
-            Fergana Kirgili
+            <FaPhoneAlt />
+            +998 91 777 27 07{" "}
           </p>
           <div className="card-actions justify-end">
             <button
               className="btn btn-primary"
               onClick={() => document.getElementById("my_modal_2").showModal()}
             >
-              <GrFormEdit className="text-lg" />
+              <FaUserEdit className="text-lg" />
               Edit
             </button>
             <dialog id="my_modal_2" className="modal">
