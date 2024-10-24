@@ -6,7 +6,7 @@ import { FaGoogle } from "react-icons/fa6";
 const Register = () => {
   return (
     <div className="align-elements py-5">
-      <div className="card w-full bg-base-100 shadow-xl">
+      <div className="card w-full bg-base-300 shadow-xl">
         <Form method="post" className="card-body">
           <h1 className="my-5 text-center text-xl">Register</h1>
           <Input type={"text"} placeholder={"Mirzo"} name={"Name"} />
