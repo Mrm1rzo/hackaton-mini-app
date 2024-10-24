@@ -22,7 +22,7 @@ const Input = ({ type, name, placeholder }) => {
         name={name}
       />
       {name == "Password" && (
-        <button>
+        <button type="button">
           <FaEye />
         </button>
       )}
